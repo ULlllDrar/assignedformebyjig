@@ -1,3 +1,67 @@
 body {
-    background: skyblue;
+    background: linear-gradient(120deg,white 48%,azure 48%,azure 55%,white 55%,white 65%,whitesmoke 65%,whitesmoke 70%,lightgray 70%,lightgray 80%,white 80%);/**/
+    /*background: linear-gradient(120deg,azure 0%,white 48%,azure 48%,#faffff  70%,white 80%,azure 100%);/**/
+    background-repeat:no-repeat;
+    height: 100vh;
+    color:skyblue;
+    font-size: 12pt;
+}
+h1{
+    color:chocolate;
+    text-shadow: 2px 2px 10px gray;
+    font-family:"Arial",sans-serif;
+}
+button{
+    background-color: white;
+    color: azure;
+    text-shadow: 2px 2px 2px mediumpurple,-2px -2px 2px mediumslateblue;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    font-size: 18pt;
+    /*box-shadow: 2px 2px 7px darkslategray;*/
+}
+li{
+    outline-color: blue;
+}
+
+@keyframes fadeOut { /*animation-nameで設定した値を書く*/
+    0% {opacity: 1} /*アニメーション開始時は不透明度0%*/
+    100% {opacity: 0} /*アニメーション終了時は不透明度100%*/
+}
+.stage{
+    display:block;
+    width:400px;height:400px;
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+    border:1px solid #ffffff88;
+    background-color:#05142b;
+}
+.center{
+    position:absolute;
+    width:0;height:0;
+    left:50%;top:50%;
+}
+.star{
+    position:absolute;z-index:1
+}
+.star:after{
+    content:"";
+    position:absolute;
+    width:50px;height:50px;
+    left:-25px;top:-25px;
+    background-image:url(./imgs/star.svg);
+    background-size:50px;
+    background-repeat:no-repeat;
+}
+.dot{
+    position:absolute;
+    width:10px;height:10px;
+    left:-5px;top:-5px;
+    border-radius:10px;
+    transition:all .5s;
+    opacity:1;
+    background-color:orangered;
+    z-index: -1;
 }

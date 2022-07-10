@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    .pg{
+        display: none;
+        text-align: center;
+        line-height: 64px;
+    }
+    button{width: 60%;display: inline;}
+    #menu{
+        font-size: 48px;
+        color: blue;
+        text-shadow: 5px 5px 5px skyblue;
+        background: linear-gradient(transparent 70%, rgb(154, 235, 212) 70%);
+        transition: transform;
+    }
+    .discribe{
+      background-color: #000a;
+      line-height: 2em;
+      border-radius: 10px;
+    }
+    </style>
+    <script type="module" src="menu.js"></script>
+  </head>
+
+  <body>
+    <p id="logo" style="text-align: right;">しりとり~shiritori~</p>
+    <span id="menu"><img id="back" src="imgs/BackButton.png" height="48"><span id="heading">モード選択</span></span>
+
+    <span id="empty"></span>
+
+    <div class="pg" id="top" data-heading="モード選択">
+      <p class="discribe">順しりとりと逆しりとりが選べます。</p>
+      <p><button onclick="location.href='playing.html?normal'">ノーマルモード</button></p>
+      <p><button onclick="location.href='playing.html?reverse'">リバースモード</button></p>
+      <p><button data-next-page="rule">ルール説明</button></p>
+    </div>
+
+    <div class="pg" id="rule" data-heading="ルール説明">
+      <h1>順しりとり(ノーマルモード)</h1>
+      <p class="discribe">
+        上側に表示される黄色と赤の文字の最後の文字に続く単語を、<br>
+        下側のインプットボックスに入力して送信ボタンで送信します。<br>
+        いわゆるふつうのしりとりです。
+      </p>
+      <h1>逆しりとり(リバースモード)</h1>
+      <p class="discribe">
+        下側に表示される黄色と赤の文字の<span style="color: pink;">最初</span>の文字が、<br>
+        <span style="color: gold;">最後の文字に来るような単語</span>を、<br>
+        上側のインプットボックスに入力して送信ボタンで送信します。
+      </p>
+      <h2 style="text-align: left;">補足:エンターキーでも送信できます。</h2>
+    </div>
+
+  </body>
+</html>

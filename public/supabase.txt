@@ -1,0 +1,3 @@
+pass: t95tP6ss30rd
+project API keys: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF5b256cnFldW12Yndvd2NwcmJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTcyMDgyNDcsImV4cCI6MTk3Mjc4NDI0N30.meT0wlN0bz2GL9v0x2t2GU7bSTkMfA9MV1W5HiDWG9g
+ProjectConfiguration: https://ayonzrqeumvbwowcprby.supabase.co

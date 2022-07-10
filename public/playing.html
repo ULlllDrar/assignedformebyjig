@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="playing.css">
+</head>
+
+<body>
+  <h1 style="float: left;">しりとり</h1><p style="text-align: right"><button id="out">退室</button></p><br>
+  <button id="test" type="button" style="display: none;">テストボタン</button>
+  <br><br>
+  <div id="words">
+    前の単語：
+    <div class="word" style="position: relative;">
+      <div id="previousWord"></div>
+      <div class="center"></div>
+    </div>
+  
+    <div id="alow" class="word">
+      Ⅴ<br>
+      Ⅴ<br>
+      Ⅴ<br>
+    </div>
+  
+    次の単語：
+    <div class="word" style="text-align: center;">
+      <input id="nextWordInput" type="text" pattern="^[ぁ-んー]*"/>
+    </div>
+  </div>
+
+  <p style="text-align:center;">
+    <button id="nextWordSendButton">送信</button>
+  </p>
+  <br>
+  <br>
+  <p>
+  履歴：<button id="resetButton">リセット</button>
+  </p>
+  <ol id="history"></ol>
+
+  <script type="module" src="playing.js"></script>
+</body>
+
+</html>

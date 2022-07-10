@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      h1{
+        position: absolute;
+        font-size: 64pt;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #tapToStart{
+        position: absolute;
+        font-size: 16pt;
+        animation: fadeOutWithDelay 2s ease-in-out 0s infinite alternate;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        padding-bottom: 50px;
+      }
+      @keyframes fadeOutWithDelay { /*animation-nameで設定した値を書く*/
+        0% {opacity: 1} /*アニメーション開始時は不透明度0%*/
+        33.3% {opacity: 1}
+        100% {opacity: 0} /*アニメーション終了時は不透明度100%*/
+      }
+    </style>
+  </head>
+  <body onclick="location.href='menu.html'" style="text-align: center;">
+    <h1>しりとり</h1>
+    <div id="tapToStart">
+      tap to start
+    </div>
+  </body>
+</html>

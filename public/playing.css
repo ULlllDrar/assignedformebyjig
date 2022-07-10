@@ -1,0 +1,51 @@
+      #previousWord {
+        position: relative;
+        text-align     : center;
+        color          : #ffff1a;            /* 文字の色 */
+        font-size      : 48pt;               /* 文字のサイズ */
+        letter-spacing : 5px;                /* 文字間 */
+        text-shadow    : 
+             5px  5px 3px red,
+            -5px  5px 3px red,
+             5px -5px 3px red,
+            -5px -5px 3px red,
+             5px  0px 3px red,
+             0px  5px 3px red,
+            -5px  0px 3px red,
+             0px -5px 3px red;        /* 文字の影 */
+      }
+      #alow {
+          text-align: center;
+          font-size: 24pt;
+          font-weight: bold;
+          line-height: 0.8em;
+          color: blue;
+          text-shadow  : 
+             5px  5px 3px green,
+            -5px  5px 3px green,
+             5px -5px 3px green,
+            -5px -5px 3px green,
+             5px  0px 3px green,
+             0px  5px 3px green,
+            -5px  0px 3px green,
+             0px -5px 3px green;   
+      }
+      #nextWordInput {
+          border-radius: 10px;
+          position: relative;
+          text-align: center;
+          background:#ffffffaa;
+          height: 1.33em;
+          width: 50%;
+          font-size: 36pt;
+          color: black;
+          text-shadow  : 
+             5px  5px 3px skyblue,
+            -5px  5px 3px skyblue,
+             5px -5px 3px skyblue,
+            -5px -5px 3px skyblue,
+             5px  0px 3px skyblue,
+             0px  5px 3px skyblue,
+            -5px  0px 3px skyblue,
+             0px -5px 3px skyblue;   
+      }
