@@ -1,5 +1,4 @@
-//共通データの保持や処理を行う
-//実行コード：deno run --allow-net --allow-read --watch shiritori/server.js
+//実行コード：deno run --allow-net --allow-read --watch server.js
 import { serve } from "https://deno.land/std@0.138.0/http/server.ts"
 import { serveDir } from "https://deno.land/std@0.138.0/http/file_server.ts";
 
@@ -95,7 +94,7 @@ serve(async (req) => {
     }
   }
   return serveDir(req, {
-    fsRoot: "shiritori/public",
+    fsRoot: "public",
     urlRoot: "",
     showDirListing: true,
     enableCors: true,
