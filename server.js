@@ -1,4 +1,5 @@
-//実行コード：deno run --allow-net --allow-read --watch server.js
+//共通データの保持や処理を行う
+//実行コード：deno run --allow-net --allow-read --watch shiritori/server.js
 import { serve } from "https://deno.land/std@0.138.0/http/server.ts"
 import { serveDir } from "https://deno.land/std@0.138.0/http/file_server.ts";
 
@@ -94,7 +95,7 @@ serve(async (req) => {
     }
   }
   return serveDir(req, {
-    fsRoot: "public",
+    fsRoot: "shiritori/public",
     urlRoot: "",
     showDirListing: true,
     enableCors: true,
@@ -109,8 +110,8 @@ const previousWordKeeper = {
     "status": 400
   },
   {
-    "detect": word=>!word.match(/^[ぁ-ゔー]*$/),
-    "prompt": "ひらがな以外は使用できません",
+    "detect": word=>!word.match(/^[ぁ-ゔァ-ヴー]*$/),
+    "prompt": "ひらがなカタカナ以外は使用できません",
     "status": 400
   },
   {
@@ -121,7 +122,7 @@ const previousWordKeeper = {
 ],
 "normal":[
   {
-    "detect": word=>word.charAt(word.length-1)==='ん',
+    "detect": word=>["ん","ン"].includes(word.charAt(word.length-1)),
     "prompt": "「ん」がついたので負けました",
     "status": 402
   },
@@ -140,7 +141,19 @@ const previousWordKeeper = {
 ]
 }
 
+const toFlat = function(str){
+  let result="";
+  for(let i=0;i<str.length;i++)
+    if(str.charAt(i).match(/^[ァ-ヴ]*$/))
+      result+=String.fromCharCode(str.charCodeAt(i)-96);
+    else
+      result+=str.charAt(i);
+  return result;
+}
+
 const isInterchangeable=function(ori,tar){// <!> ori : str, tar : char
+  ori = toFlat(ori);
+  tar = toFlat(tar);
   let c = ori.charAt(ori.length-1);
   let c2 = ori.charAt(ori.length-2);
   switch(c){
@@ -166,7 +179,6 @@ const isInterchangeable=function(ori,tar){// <!> ori : str, tar : char
       if(c==tar.charAt(0))//同じ文字なら許容
         return true;
       let pos = KanaFromUnicode(c.charCodeAt(0));
-        console.log(pos);
       if([1,2].includes(pos.Bac)&&[1,2,3,5].includes(pos.Row)){//濁点などがついているか判定
         if(String.fromCharCode(KanaToUnicode(pos.Row,pos.Stg))==tar.charAt(0))//濁点の除去を許容
           return true;
