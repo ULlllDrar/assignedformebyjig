@@ -18,7 +18,7 @@ button{
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 10px;
-    border-color: lightgray gray gray lightgray;
+    border-color: gray darkgray darkgray gray;
     font-size: 18pt;
     /*box-shadow: 2px 2px 7px darkslategray;*/
 }
