@@ -150,7 +150,7 @@ const toFlat = function(str){
   return result;
 }
 
-const isInterchangeable=function(ori,tar){// <!> ori : str, tar : char
+const isInterchangeable=function(ori,tar){ //互換チェック
   ori = toFlat(ori);
   tar = toFlat(tar);
   let c = ori.charAt(ori.length-1);
