@@ -52,5 +52,5 @@
       #history{
           border: solid 2px #9aebd4;
           overflow-y: scroll;
-          
+          height: 100px;
       }
