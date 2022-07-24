@@ -49,3 +49,7 @@
             -5px  0px 3px skyblue,
              0px -5px 3px skyblue;   
       }
+      #history{
+          border: solid 2px #9aebd4;
+          overflow-y: scroll;
+      }
