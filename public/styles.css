@@ -1,6 +1,7 @@
 iframe {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 body {
     background: linear-gradient(120deg,white 48%,azure 48%,azure 55%,white 55%,white 65%,whitesmoke 65%,whitesmoke 70%,lightgray 70%,lightgray 80%,white 80%);/**/
