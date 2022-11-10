@@ -15,7 +15,9 @@
       }
     </style>
     <script>
-      document.addEventListener('touchmove', (event)=>{alert("test2");event.preventDefault()}, { passive: true });
+      window.addEventListener('touchmove', function(event) {
+        event.preventDefault();
+      });
     </script>
   </head>
   <body>
