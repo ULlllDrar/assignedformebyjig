@@ -4,21 +4,18 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
     <style>
+      body{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+      }
       h1{
-        position: absolute;
         font-size: 64pt;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
       }
       #tapToStart{
-        position: absolute;
         font-size: 16pt;
         animation: fadeOutWithDelay 2s ease-in-out 0s infinite alternate;
-        bottom: 0%;
-        left: 50%;
-        transform: translate(-50%, 0%);
-        padding-bottom: 50px;
       }
       @keyframes fadeOutWithDelay { /*animation-nameで設定した値を書く*/
         0% {opacity: 1} /*アニメーション開始時は不透明度0%*/
@@ -27,7 +24,7 @@
       }
     </style>
   </head>
-  <body style="text-align: center;" onclick="location.href='./menu.html'">
+  <body style="text-align: center;display: flex;" onclick="location.href='./menu.html'">
     <h1>しりとり</h1>
     <div id="tapToStart">
       tap to start
