@@ -5,6 +5,7 @@ body {
     height: 100vh;
     color:skyblue;
     font-size: 12pt;
+    position: fixed;
 }
 h1{
     color:chocolate;
