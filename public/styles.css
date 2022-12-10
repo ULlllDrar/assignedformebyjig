@@ -3,6 +3,7 @@ body {
     /*background: linear-gradient(120deg,azure 0%,white 48%,azure 48%,#faffff  70%,white 80%,azure 100%);/**/
     background-repeat:no-repeat;
     height: 100vh;
+    width: 100vw;
     color:skyblue;
     font-size: 12pt;
     position: fixed;
